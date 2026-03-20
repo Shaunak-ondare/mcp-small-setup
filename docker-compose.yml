@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 
 services:
   app:
@@ -6,3 +6,12 @@ services:
     container_name: mcp-app
     ports:
       - "3000:3000"
+
+  scanner:
+    image: sonarsource/sonar-scanner-cli
+    container_name: sonar-scanner
+    env_file:
+      - .env
+    volumes:
+      - .:/usr/src
+    working_dir: /usr/src

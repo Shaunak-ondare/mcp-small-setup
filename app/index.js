@@ -14,7 +14,7 @@ app.get('/add', (req, res) => {
 });
 
 app.get('/divide', (req, res) => {
-    const result = divide(10, 0); // intentional issue (Sonar will catch)
+    const result = divide(10, 0); // intentional issue
     res.json({ result });
 });
 
