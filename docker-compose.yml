@@ -6,11 +6,3 @@ services:
     container_name: mcp-app
     ports:
       - "3000:3000"
-    depends_on:
-      - sonarqube
-
-  sonarqube:
-    image: sonarqube:lts
-    container_name: sonarqube
-    ports:
-      - "9000:9000"
