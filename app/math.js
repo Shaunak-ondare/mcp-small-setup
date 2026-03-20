@@ -1,9 +1,8 @@
-function add(a, b) {
-    return a + b;
-}
-
 function divide(a, b) {
-    return a / b; // ⚠️ no zero check (Sonar issue)
+    if (b === 0) {
+        console.log("Division by zero"); // bad practice
+    }
+    return a / b;
 }
 
-module.exports = { add, divide };
+var x = 10; // use 'var' (code smell)
